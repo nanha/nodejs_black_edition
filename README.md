@@ -39,6 +39,7 @@
 - fs_extra: 파일복사 API가 없어? 줸장. fs_extra.copy 모듈
 - clog: console.log, info 구분이 안된다. prefix 를 색상을 입혀서 붙여주는 모듈
 - node-static: RFC2616 compliant HTTP static-file server module, with built-in caching.
+- commander: cli에서 node app를 실행할때 옵션설정을 쉽게 할 수 있는 모듈
 
 
 # 추가로 작업중인 Native Module 목록
