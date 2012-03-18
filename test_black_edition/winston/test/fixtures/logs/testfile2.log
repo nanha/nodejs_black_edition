@@ -56,3 +56,11 @@
 {"duration":"1006ms","level":"info","message":"test2"}
 {"duration":"1001ms","level":"info","message":"test"}
 {"duration":"1002ms","level":"info"}
+{"duration":"1003ms","level":"info","message":"test1"}
+{"duration":"1005ms","level":"info","message":"test2"}
+{"duration":"1003ms","level":"info","message":"test"}
+{"duration":"1004ms","level":"info"}
+{"duration":"1004ms","level":"info","message":"test1"}
+{"duration":"1014ms","level":"info","message":"test2"}
+{"duration":"1003ms","level":"info","message":"test"}
+{"duration":"1003ms","level":"info"}

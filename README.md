@@ -7,7 +7,7 @@
 # 개요
 -------
 
-  Node.js를 다루면서 Native module로서 필요가 있을만한 기능이나 외부모듈이 있을경우 이것들을 Native Module로서 탑재하는 것에 목적을 두고 있습니다.
+  Node.js를 다루면서 Native module로서 필요가 있을만한 기능이나 외부모듈이 있을경우 이것들을 Native Module로서 탑재하는 것에 목적을 두고 있습니다. Python의 수치연산을 도와주는 [Numpy](http://www.scipy.org/Numpy_Example_List)라는 패키지와 같이 발전하는것이 목표입니다.
 
 
 # 외부모듈 탑재할 시 고려할 점
@@ -40,6 +40,11 @@
 - clog: console.log, info 구분이 안된다. prefix 를 색상을 입혀서 붙여주는 모듈
 - node-static: RFC2616 compliant HTTP static-file server module, with built-in caching.
 - commander: cli에서 node app를 실행할때 옵션설정을 쉽게 할 수 있는 모듈
+- optimist: Light-weight option parsing for node.js
+- hashish
+- underscore
+- traverse
+- wordwrap
 
 
 # 추가로 작업중인 Native Module 목록
@@ -47,5 +52,4 @@
 
 - cradle: A high-level, caching, CouchDB library for Node.js
 - node_redis: Redis client for node
-- optimist: Light-weight option parsing for node.js
 - xml2js: Simple XML to JavaScript object converter.

@@ -231,6 +231,31 @@
     global.__defineGetter__('_commander', function() {
       return NativeModule.require('ext_commander');
     });
+    
+    // underscore
+    global.__defineGetter__('_underscore', function() {
+      return NativeModule.require('ext_underscore');
+    });
+
+    // wordwrap
+    global.__defineGetter__('_wordwrap', function() {
+      return NativeModule.require('ext_wordwrap');
+    });
+
+    // hashish
+    global.__defineGetter__('_hashish', function() {
+      return NativeModule.require('ext_hashish');
+    });
+
+    // traverse
+    global.__defineGetter__('_traverse', function() {
+      return NativeModule.require('ext_traverse');
+    });
+
+    // optimist
+    global.__defineGetter__('_optimist', function() {
+      return NativeModule.require('ext_optimist');
+    });
   };
 
   startup._lazyConstants = null;
