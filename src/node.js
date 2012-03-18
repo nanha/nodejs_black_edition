@@ -178,56 +178,57 @@
    */
   startup.globalThirdPartyModule = function() {
     // Node.js Black edition Information
-    global.black = (function() {
+    global.black_edition = (function() {
         return NativeModule.require('ext_black_edition_info');
     })();
 
     // colors
     // https://github.com/nanha/colors.js
-    NativeModule.require('ext_colors');
+    (function() {
+        NativeModule.require('ext_colors');
+    })();
 
     // node-mysql
     // https://github.com/felixge/node-mysql
-    global.__defineGetter__('mysql', function() {
+    global.__defineGetter__('_mysql', function() {
       return NativeModule.require('ext_mysql');
     });
 
     // clog
     // https://github.com/firejune/clog
-    // https://github.com/firejune/clog
-    global.__defineGetter__('clog', function() {
+    global.__defineGetter__('_clog', function() {
       return NativeModule.require('ext_clog');
     });
 
     // async
     // https://github.com/caolan/async
-    global.__defineGetter__('async', function() {
+    global.__defineGetter__('_async', function() {
       return NativeModule.require('ext_async');
     });
 
     // winston
     // https://github.com/flatiron/winston
-    global.__defineGetter__('winston', function() {
+    global.__defineGetter__('_winston', function() {
       return NativeModule.require('ext_winston');
     });
     
     // file copy, move
-    global.__defineGetter__('fs_extra', function() {
+    global.__defineGetter__('_fs', function() {
       return NativeModule.require('ext_fs');
     });
 
     // mkdirp
-    global.__defineGetter__('mkdirp', function() {
+    global.__defineGetter__('_mkdirp', function() {
       return NativeModule.require('ext_mkdirp');
     });
 
     // node_static
-    global.__defineGetter__('node_static', function() {
+    global.__defineGetter__('_node_static', function() {
       return NativeModule.require('ext_node_static');
     });
 
     // commander
-    global.__defineGetter__('commander', function() {
+    global.__defineGetter__('_commander', function() {
       return NativeModule.require('ext_commander');
     });
   };
