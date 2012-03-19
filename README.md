@@ -53,3 +53,26 @@
 - cradle: A high-level, caching, CouchDB library for Node.js
 - node_redis: Redis client for node
 - xml2js: Simple XML to JavaScript object converter.
+
+
+# TEST
+--------
+탑재된 모듈마다 test 디렉토리가 존재하는데, 이를 적당히 수정하고 취합하여 TEST 결과를 확인할 수 있습니다
+
+- node.js 소스트리에 패키지를 위치시킵니다.
+- cd test_black_edition
+- make test
+
+
+# 사용방법
+-----------
+
+* 저장소를 clone하여 node.js 소스트리 최상위에서 압축을 해제합니다.
+* lib 디렉토리의 라이브러리와 src/node.js 파일이 덮어쓰기 되어지니 참고하세요.
+* node.js 를 처음 설치한 경우
+  * configure부터 진행
+* 기존에 node.js가 설치되어 있다면
+  * make, make install 해주시면 됩니다. lib 디렉토리 관련해서만 build 과정이 이루어 집니다.
+* 그럼 이제 node 를 실행하시고, 탑재된 Native module를 즐겨보세요.
+
+  [root@nodejs:lib]# node -e "var a = require('./ext_black_edition_info.js'); console.log(a.help('colors').DESCRIPTION)"
