@@ -181,6 +181,12 @@
     global.black_edition = (function() {
         return NativeModule.require('ext_black_edition_info');
     })();
+    global.help = (function() {
+        var help = NativeModule.require('ext_black_edition_info').help;
+        return function(id) {
+            return help(id);
+        };
+    })();
 
     // colors
     // https://github.com/nanha/colors.js
