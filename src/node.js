@@ -180,42 +180,22 @@
    * @author nhpark
    */
   startup.globalThirdPartyModule = function() {
+    // colors
+    // https://github.com/nanha/colors.js
+    NativeModule.require('colors');
+
+    // util extend, String, Array prototype
+    NativeModule.require('util_extend');
+
     // Node.js Black edition Information
-    // TypeError: Object.prototype.__defineGetter__: Expecting function
-    global.black_edition = (function() {
-        var a = NativeModule.require('black_edition_info');
-        return (function() {
-            return a;
-        })();
-    })();
+    global.black_edition = NativeModule.require('black_edition_info');
 
     // help function
-    global.help = (function() {
-        var help = NativeModule.require('black_edition_info').help;
-        return function(id) {
-            return help(id);
-        };
-    })();
+    global.help = NativeModule.require('black_edition_info').help;
 
     // Class function
     // http://code.google.com/p/inheritance/
-    global.Class = (function() {
-        var a = NativeModule.require('util_class').Class;
-        return (function() {
-            return a;
-        })();
-    })();
-
-    // colors
-    // https://github.com/nanha/colors.js
-    (function() {
-        NativeModule.require('colors');
-    })();
-
-    // util extend, String, Array prototype
-    (function() {
-        NativeModule.require('util_extend');
-    })();
+    global.Class = NativeModule.require('util_class').Class;
   };
 
   startup._lazyConstants = null;
