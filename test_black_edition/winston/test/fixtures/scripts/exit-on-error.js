@@ -7,7 +7,7 @@
  */
  
 var path = require('path'),
-    winston = _winston;
+    winston = require('winston');
 
 winston.exitOnError = function (err) {
   return err.message !== 'Ignore this error';

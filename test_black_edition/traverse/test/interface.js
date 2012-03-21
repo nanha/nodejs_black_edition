@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Traverse = _traverse;
+var Traverse = require('traverse');
 
 exports['interface map'] = function () {
     var obj = { a : [ 5,6,7 ], b : { c : [8] } };

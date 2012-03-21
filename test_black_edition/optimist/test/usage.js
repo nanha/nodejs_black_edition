@@ -1,5 +1,5 @@
-var Hash = _hashish;
-var optimist = _optimist;
+var Hash = require('hashish');
+var optimist = require('optimist');
 var assert = require('assert');
 
 exports.usageFail = function () {

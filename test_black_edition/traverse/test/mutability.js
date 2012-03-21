@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Traverse = _traverse;
+var Traverse = require('traverse');
 var deepEqual = require('./lib/deep_equal');
 
 exports.mutate = function () {

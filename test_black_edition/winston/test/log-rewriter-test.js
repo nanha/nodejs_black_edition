@@ -8,7 +8,7 @@
 
 var assert = require('assert'),
     vows = require('vows'),
-    winston = _winston,
+    winston = require('winston'),
     helpers = require('./helpers');
 
 vows.describe('winston/logger/rewriter').addBatch({

@@ -13,7 +13,7 @@ var assert = require('assert'),
     fs = require('fs'),
     path = require('path'),
     vows = require('vows'),
-    winston = _winston,
+    winston = require('winston'),
     helpers = require('../helpers');
 
 var maxfilesTransport = new winston.transports.File({

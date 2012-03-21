@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Traverse = _traverse;
+var Traverse = require('traverse');
 
 exports['sort test'] = function () {
     var acc = [];

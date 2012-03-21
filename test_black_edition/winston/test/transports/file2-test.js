@@ -10,7 +10,7 @@ var path = require('path'),
     vows = require('vows'),
     fs = require('fs'),
     assert = require('assert'),
-    winston = _winston,
+    winston = require('winston'),
     helpers = require('../helpers');
 
 var stream = fs.createWriteStream(path.join(__dirname, '..', 'fixtures', 'logs', 'testfile.log')),

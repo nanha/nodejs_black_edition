@@ -10,7 +10,7 @@ var assert = require('assert'),
     path = require('path'),
     spawn = require('child_process').spawn,
     vows = require('vows'),
-    winston = _winston,
+    winston = require('winston'),
     helpers = require('./helpers');
 
 vows.describe('winston/logger/exceptions').addBatch({

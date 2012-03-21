@@ -11,7 +11,7 @@ var path = require('path'),
     fs = require('fs'),
     http = require('http'),
     assert = require('assert'),
-    winston = _winston,
+    winston = require('winston'),
     helpers = require('../helpers');
 
 var couchdbTransport = new (winston.transports.Couchdb)({ 

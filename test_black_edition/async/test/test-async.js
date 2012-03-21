@@ -1,4 +1,4 @@
-var async = _async;
+var async = require('async');
 
 
 exports['auto'] = function(test){

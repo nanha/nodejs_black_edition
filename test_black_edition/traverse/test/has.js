@@ -1,5 +1,5 @@
 var assert = require('assert');
-var traverse = _traverse;
+var traverse = require('traverse');
 
 exports.has = function () {
     var obj = { a : 2, b : [ 4, 5, { c : 6 } ] };

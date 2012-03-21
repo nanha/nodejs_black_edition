@@ -174,94 +174,48 @@
    * - RangeError: Maximum call stack size exceeded
    *   => 'x' prefix + keyword
    *
+    global.__defineGetter__('console', function() {
+      return NativeModule.require('console');
+    });
    * @author nhpark
    */
   startup.globalThirdPartyModule = function() {
     // Node.js Black edition Information
+    // TypeError: Object.prototype.__defineGetter__: Expecting function
     global.black_edition = (function() {
-        return NativeModule.require('ext_black_edition_info');
+        var a = NativeModule.require('black_edition_info');
+        return (function() {
+            return a;
+        })();
     })();
+
+    // help function
     global.help = (function() {
-        var help = NativeModule.require('ext_black_edition_info').help;
+        var help = NativeModule.require('black_edition_info').help;
         return function(id) {
             return help(id);
         };
     })();
 
+    // Class function
+    // http://code.google.com/p/inheritance/
+    global.Class = (function() {
+        var a = NativeModule.require('util_class').Class;
+        return (function() {
+            return a;
+        })();
+    })();
+
     // colors
     // https://github.com/nanha/colors.js
     (function() {
-        NativeModule.require('ext_colors');
+        NativeModule.require('colors');
     })();
 
-    // node-mysql
-    // https://github.com/felixge/node-mysql
-    global.__defineGetter__('_mysql', function() {
-      return NativeModule.require('ext_mysql');
-    });
-
-    // clog
-    // https://github.com/firejune/clog
-    global.__defineGetter__('_clog', function() {
-      return NativeModule.require('ext_clog');
-    });
-
-    // async
-    // https://github.com/caolan/async
-    global.__defineGetter__('_async', function() {
-      return NativeModule.require('ext_async');
-    });
-
-    // winston
-    // https://github.com/flatiron/winston
-    global.__defineGetter__('_winston', function() {
-      return NativeModule.require('ext_winston');
-    });
-    
-    // file copy, move
-    global.__defineGetter__('_fs', function() {
-      return NativeModule.require('ext_fs');
-    });
-
-    // mkdirp
-    global.__defineGetter__('_mkdirp', function() {
-      return NativeModule.require('ext_mkdirp');
-    });
-
-    // node_static
-    global.__defineGetter__('_node_static', function() {
-      return NativeModule.require('ext_node_static');
-    });
-
-    // commander
-    global.__defineGetter__('_commander', function() {
-      return NativeModule.require('ext_commander');
-    });
-    
-    // underscore
-    global.__defineGetter__('_underscore', function() {
-      return NativeModule.require('ext_underscore');
-    });
-
-    // wordwrap
-    global.__defineGetter__('_wordwrap', function() {
-      return NativeModule.require('ext_wordwrap');
-    });
-
-    // hashish
-    global.__defineGetter__('_hashish', function() {
-      return NativeModule.require('ext_hashish');
-    });
-
-    // traverse
-    global.__defineGetter__('_traverse', function() {
-      return NativeModule.require('ext_traverse');
-    });
-
-    // optimist
-    global.__defineGetter__('_optimist', function() {
-      return NativeModule.require('ext_optimist');
-    });
+    // util extend, String, Array prototype
+    (function() {
+        NativeModule.require('util_extend');
+    })();
   };
 
   startup._lazyConstants = null;

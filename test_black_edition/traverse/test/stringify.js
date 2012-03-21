@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Traverse = _traverse;
+var Traverse = require('traverse');
 
 exports.stringify = function () {
     var obj = [ 5, 6, -3, [ 7, 8, -2, 1 ], { f : 10, g : -13 } ];

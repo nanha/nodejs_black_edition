@@ -1,4 +1,4 @@
-var traverse = _traverse;
+var traverse = require('traverse');
 
 module.exports = function (a, b) {
     if (arguments.length !== 2) {

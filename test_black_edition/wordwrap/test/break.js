@@ -1,5 +1,5 @@
 var assert = require('assert');
-var wordwrap = _wordwrap;
+var wordwrap = require('wordwrap');
 
 exports.hard = function () {
     var s = 'Assert from {"type":"equal","ok":false,"found":1,"wanted":2,'

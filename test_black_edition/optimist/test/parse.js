@@ -1,4 +1,4 @@
-var optimist = _optimist;
+var optimist = require('optimist');
 var assert = require('assert');
 var path = require('path');
 

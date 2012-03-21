@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Traverse = _traverse;
+var Traverse = require('traverse');
 
 exports['leaves test'] = function () {
     var acc = [];

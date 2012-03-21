@@ -10,7 +10,7 @@ var assert = require('assert'),
     fs = require('fs'),
     path = require('path'),
     spawn = require('child_process').spawn,
-    winston = _winston,
+    winston = require('winston'),
     util = require('util'),
     vows = require('vows');
     

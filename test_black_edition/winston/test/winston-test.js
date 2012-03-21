@@ -11,7 +11,7 @@ var fs = require('fs'),
     vows = require('vows'),
     http = require('http'),
     assert = require('assert'),
-    winston = _winston,
+    winston = require('winston'),
     helpers = require('./helpers');
   
 vows.describe('winston').addBatch({

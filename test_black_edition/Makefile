@@ -7,3 +7,6 @@ test:
 	node wordwrap/test/*
 	expresso traverse/test/*
 	expresso optimist/test/*
+	expresso wordwrap/test/*
+	node step/test/*
+	expresso fileutils/test/*

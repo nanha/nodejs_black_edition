@@ -12,7 +12,7 @@ var path = require('path'),
     http = require('http'),
     https = require('https'),
     assert = require('assert'),
-    winston = _winston,
+    winston = require('winston'),
     helpers = require('../helpers');
 
 var webhookTransport = new (winston.transports.Webhook)({ 

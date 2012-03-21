@@ -9,7 +9,7 @@
 var path = require('path'),
     vows = require('vows'),
     assert = require('assert'),
-    winston = _winston,
+    winston = require('winston'),
     helpers = require('./helpers');
 
 vows.describe('winton/logger').addBatch({

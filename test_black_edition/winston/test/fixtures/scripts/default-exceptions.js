@@ -7,7 +7,7 @@
  */
  
 var path = require('path'),
-    winston = _winston;
+    winston = require('winston');
 
 winston.handleExceptions([
   new (winston.transports.File)({ 
