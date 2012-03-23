@@ -8,7 +8,7 @@
 # 개요
 -------
 
-  Node.js를 다루면서 Native module로서 필요가 있을만한 기능이나 외부모듈이 있을경우 이것들을 Native Module로서 탑재하는 것에 목적을 두고 있습니다. Python의 수치연산을 도와주는 [Numpy](http://www.scipy.org/Numpy_Example_List)라는 패키지와 같이 발전하는것이 목표입니다.
+  Node.js를 다루면서 Native module로서 필요가 있을만한 기능이나 외부모듈이 있을경우 이것들을 Native Module로서 탑재하는 것에 목적을 두고 있습니다. npm 없이 기본적으로 require하여 사용할 수 있고, help global function을 사용하여 모듈키워드에 대한 사용방법을 바로 확인할 수 있습니다.
 
 
 # 외부모듈 탑재할 시 고려할 점
@@ -20,14 +20,24 @@
 # 장점
 -------
 
-- npm으로 설치하고 require으로 불러오는 번거로움을 없앨 수 있습니다.
-- Node.js 작업시 발생할 수 있는 이슈를 Native module로서 해결 할 수 있습니다.
+- npm 으로 설치하고 사용방법을 github에 찾아다니는 번거로움을 없앨 수 있습니다.
+- Class, def 함수를 global function으로 설정하여 OOP를 Native 으로 즐길 수 있습니다.
+- 작업시 필수적으로 필요할만한 유틸리티를 기본적으로 사용할 수 있습니다.
 
 
 # 단점
 -------
 
-- ...
+- 만약 Native 으로 컴파일한 모듈의 문제가 발생시 Node.js Black Edition 으로부터 패치를 받아야 함.
+
+
+# 현재 사용할 수 있는 global function
+--------------------------------------
+
+- Class
+- def
+- help
+- information
 
 
 # 현재 기본적으로 사용가능한 Native Module 목록
@@ -46,12 +56,21 @@
 - underscore
 - traverse
 - wordwrap
+- step
+- fileutils (fs.copy, fs.move)
+- glob
+- minimatch
+- mkdirp
+- moment
+- restler
+- traverse
+- underscore
+- Array, String prototype 
 
 
 # 추가로 작업중인 Native Module 목록
 -----------------------------------------------
 
-- cradle: A high-level, caching, CouchDB library for Node.js
 - node_redis: Redis client for node
 - xml2js: Simple XML to JavaScript object converter.
 
@@ -76,8 +95,7 @@
   * make, make install 해주시면 됩니다. lib 디렉토리 관련해서만 build 과정이 이루어 집니다.
 * 그럼 이제 node 를 실행하시고, 탑재된 Native module를 즐겨보세요.
 
+
 # DEMO
 -----------
 <img src="https://p.twimg.com/AoZcb4ICIAMmnW0.png:large">
-
-test
