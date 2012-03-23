@@ -170,13 +170,6 @@
    * Node black edition
    * import Third party module to Native module
    *
-   * Causion:
-   * - RangeError: Maximum call stack size exceeded
-   *   => 'x' prefix + keyword
-   *
-    global.__defineGetter__('console', function() {
-      return NativeModule.require('console');
-    });
    * @author nhpark
    */
   startup.globalThirdPartyModule = function() {
@@ -184,18 +177,14 @@
     // https://github.com/nanha/colors.js
     NativeModule.require('colors');
 
-    // util extend, String, Array prototype
-    NativeModule.require('util_extend');
+    // util String, Array prototype
+    NativeModule.require('util_prototype');
 
     // Node.js Black edition Information
-    global.black_edition = NativeModule.require('black_edition_info');
+    NativeModule.require('black_edition_info');
 
-    // help function
-    global.help = NativeModule.require('black_edition_info').help;
-
-    // Class function
-    // http://code.google.com/p/inheritance/
-    global.Class = NativeModule.require('util_class').Class;
+    // util class: def, Class method
+    NativeModule.require('util_class');
   };
 
   startup._lazyConstants = null;
