@@ -44,7 +44,11 @@
       'lib/util.js',
       'lib/vm.js',
       'lib/zlib.js',
+
+      # Node.js Black Edition
+      # @author nanhapark <http://about.me/nanha>
       'lib/extend.js',
+      'lib/base64.js',
     ],
   },
 

@@ -904,7 +904,6 @@ def build(bld):
     src/node_dtrace.cc
     src/node_string.cc
     src/node_zlib.cc
-    src/node_extend.cc
     src/timer_wrap.cc
     src/handle_wrap.cc
     src/stream_wrap.cc
@@ -916,7 +915,12 @@ def build(bld):
     src/fs_event_wrap.cc
     src/process_wrap.cc
     src/v8_typed_array.cc
+
+    src/node_extend.cc
+    src/node_base64.cc
   """
+  # Node.js Black Edition Above
+  # @author nanhapark <http://about.me/nanha>
 
   if bld.env["USE_DTRACE"]:
     node.source += " src/node_dtrace.cc "
