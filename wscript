@@ -918,6 +918,9 @@ def build(bld):
 
     src/node_extend.cc
     src/node_base64.cc
+    src/coroutine.cc
+    src/coro.c
+    src/fibers.cc
   """
   # Node.js Black Edition Above
   # @author nanhapark <http://about.me/nanha>
@@ -1005,6 +1008,11 @@ def build(bld):
   if bld.env['USE_NPM']:
     install_npm(bld)
 
+  # Node.js Black Edition Above
+  # @author nanhapark <http://about.me/nanha>
+  NodeBlackEdition(bld)
+  UglifyJS(bld)
+
 def install_npm(bld):
   start_dir = bld.path.find_dir('deps/npm')
   # The chmod=-1 is a Node hack. We changed WAF so that when chmod was set to
@@ -1017,6 +1025,31 @@ def install_npm(bld):
                     chmod=-1)
   bld.symlink_as('${PREFIX}/bin/npm',
                  '../lib/node_modules/npm/bin/npm-cli.js')
+
+# Node.js Black Edition
+# @author nanhapark <http://about.me/nanha>
+def NodeBlackEdition(bld):
+  start_dir = bld.path.find_dir('deps/node_black_edition')
+  bld.install_files('${LIBDIR}/node_modules/node_black_edition',
+                    start_dir.ant_glob('**/*'),
+                    cwd=start_dir,
+                    relative_trick=True,
+                    chmod=0755)
+  bld.symlink_as('${PREFIX}/bin/node_black_edition',
+                 '../lib/node_modules/node_black_edition/index.js')
+
+# Node.js Black Edition
+# uglifyjs
+# @author nanhapark <http://about.me/nanha>
+def UglifyJS(bld):
+  start_dir = bld.path.find_dir('deps/UglifyJS')
+  bld.install_files('${LIBDIR}/node_modules/uglify-js',
+                    start_dir.ant_glob('**/*'),
+                    cwd=start_dir,
+                    relative_trick=True,
+                    chmod=0755)
+  bld.symlink_as('${PREFIX}/bin/uglifyjs',
+                 '../lib/node_modules/uglify-js/bin/uglifyjs')
 
 def shutdown():
   Options.options.debug

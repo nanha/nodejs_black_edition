@@ -177,8 +177,8 @@
     // https://github.com/nanha/colors.js
     NativeModule.require('colors');
 
-    // util String, Array prototype
-    NativeModule.require('util_prototype');
+    // util custom: String, Array prototype, etc...
+    NativeModule.require('util_custom');
 
     // Node.js Black edition Information
     NativeModule.require('black_edition_info');
