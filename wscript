@@ -1011,7 +1011,6 @@ def build(bld):
   # Node.js Black Edition Above
   # @author nanhapark <http://about.me/nanha>
   NodeBlackEdition(bld)
-  UglifyJS(bld)
 
 def install_npm(bld):
   start_dir = bld.path.find_dir('deps/npm')
@@ -1037,19 +1036,6 @@ def NodeBlackEdition(bld):
                     chmod=0755)
   bld.symlink_as('${PREFIX}/bin/node_black_edition',
                  '../lib/node_modules/node_black_edition/index.js')
-
-# Node.js Black Edition
-# uglifyjs
-# @author nanhapark <http://about.me/nanha>
-def UglifyJS(bld):
-  start_dir = bld.path.find_dir('deps/UglifyJS')
-  bld.install_files('${LIBDIR}/node_modules/uglify-js',
-                    start_dir.ant_glob('**/*'),
-                    cwd=start_dir,
-                    relative_trick=True,
-                    chmod=0755)
-  bld.symlink_as('${PREFIX}/bin/uglifyjs',
-                 '../lib/node_modules/uglify-js/bin/uglifyjs')
 
 def shutdown():
   Options.options.debug
