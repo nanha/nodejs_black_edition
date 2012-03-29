@@ -10,8 +10,7 @@
 
 # 개요
 
-  Node.js에 유용한 확장 모듈을 native module 로 추가하고 이에 대한 Help 함수를 제공하는데 목적이 있습니다. 
-  Native module로서 있었으면 하는 기능이나 유용한 확장 모듈이 있을경우 이것들을 Native Module로서 탑재하는 것에 목적을 두고 있습니다. **npm 설치 없이** require하여 사용할 수 있고, **help global function**을 사용하여 모듈키워드에 대한 사용방법을 바로 확인할 수 있습니다.
+  Node.js에 유용한 확장 모듈을 native module 로 추가하고 이에 대한 Help 함수를 제공하는데 목적이 있습니다. **npm 설치 없이** require하여 사용할 수 있고, **help global function**을 사용하여 모듈키워드에 대한 사용방법을 바로 확인할 수 있습니다.
 
 
 
@@ -23,7 +22,7 @@
 # 장점
 
 - Native Module로서 탑재되었기 때문에, require시에 **파일로드 과정을 거치지 않습니다.**
-- npm 으로 설치하고, 사용방법을 github에 찾아다니는 번거로움을 없앨 수 있습니다.
+- Python과 같이 help함수를 지원하기 때문에, npm 으로 설치하고, 사용방법을 github에 찾아다니는 번거로움을 없앨 수 있습니다.
 - Class, def 함수를 global function으로 설정하여 OOP를 Native 으로 즐길 수 있습니다.
 - 작업시 필수적으로 필요할만한 유틸리티를 기본적으로 사용할 수 있습니다.
 
@@ -53,4 +52,4 @@
 
 # DEMO
 
-<img src="https://p.twimg.com/AoZcb4ICIAMmnW0.png:large">
+<img src="http://i.minus.com/ibyXERTakBTmxo.png">
