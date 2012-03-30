@@ -53,11 +53,10 @@ Node Black Edition 소개
         make
         make install
 
-* 그럼 이제 node 를 실행하시고, 탑재된 Native module를 즐겨보세요.
 
-
-
-DEMO
-------
-
-<img src="http://i.minus.com/ibyXERTakBTmxo.png">
+사용방법 DEMO
+----------------
+-
+-
+-
+-
