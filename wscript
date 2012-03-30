@@ -1028,14 +1028,14 @@ def install_npm(bld):
 # Node.js Black Edition
 # @author nanhapark <http://about.me/nanha>
 def NodeBlackEdition(bld):
-  start_dir = bld.path.find_dir('deps/node_black_edition')
-  bld.install_files('${LIBDIR}/node_modules/node_black_edition',
+  start_dir = bld.path.find_dir('deps/nodeman')
+  bld.install_files('${LIBDIR}/node_modules/nodeman',
                     start_dir.ant_glob('**/*'),
                     cwd=start_dir,
                     relative_trick=True,
                     chmod=0755)
-  bld.symlink_as('${PREFIX}/bin/node_black_edition',
-                 '../lib/node_modules/node_black_edition/index.js')
+  bld.symlink_as('${PREFIX}/bin/nodeman',
+                 '../lib/node_modules/nodeman/index.js')
 
 def shutdown():
   Options.options.debug
