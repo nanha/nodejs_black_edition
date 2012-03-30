@@ -1035,7 +1035,7 @@ def NodeBlackEdition(bld):
                     relative_trick=True,
                     chmod=0755)
   bld.symlink_as('${PREFIX}/bin/nodeman',
-                 '../lib/node_modules/nodeman/index.js')
+                 '../lib/node_modules/nodeman/bin/nodeman')
 
 def shutdown():
   Options.options.debug
