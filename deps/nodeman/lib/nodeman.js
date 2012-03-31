@@ -20,7 +20,7 @@ var colors = require('colors'),
  * - {{homepage}}
  * - {{description}}
  */
-var tpl = [
+var tpl_doc = [
     "NAME".yellow
     , "\t{{name}}"
     , ""
@@ -34,6 +34,22 @@ var tpl = [
     ,"{{&description}}"
 ].join('\n');
 
+var tpl_builtin = [
+    '    Current embed moduleName list'.red
+    , '    --------------------------------'
+    , ""
+    , '    usage: nodeman [moduleName]'.yellow
+    , ""
+    , '    - public module list'.magenta
+    , ""
+    , '    {{public}}'.cyan
+    , ""
+    , '    - native module list (Node.js Black Edition)'.magenta
+    , ""
+    , '    {{native}}'.cyan
+    , ""
+].join('\n');
+
 /**
  * builtin list
  *
@@ -44,21 +60,27 @@ function builtin() {
     fs.readdir(docs, function(err, files) {
         if (err) throw new Error(err);
 
-        var __builtin__ = [];
+        var public = [], native = [];
         files.forEach(function(file) {
             if (!/_doc/.test(file)) return;
 
-            __builtin__.push(file.replace(/_doc.js/g, ''));
+            if (/^public_/.test(file)) {
+                public.push(file.replace(/public_|_doc.js/g, ''));
+            } else {
+                native.push(file.replace(/_doc.js/g, ''));
+            }
         });
 
+        // parsing
+        var view = {
+            public: public.join(', '),
+            native: native.join(', ')
+        };
+        var output = mustache.render(tpl_builtin, view);
+
+        // print
         console.log('\033[2J');
-        console.log('    Current embed moduleName list'.red);
-        console.log('    --------------------------------');
-        console.log();
-        console.log('    usage: nodeman [moduleName]'.yellow);
-        console.log();
-        console.log('    ' + __builtin__.join(', ').cyan);
-        console.log();
+        console.log(output);
         console.log();
     });
 }
@@ -72,21 +94,36 @@ function builtin() {
  */
 function help(id, cb) {
     if (typeof id == 'undefined') {
-        console.log("usage: help('moduleName')");
+        console.log("usage: help('moduleName')".red);
         return;
     }
 
-    try {
-        var view = require('../docs/' + id + '_doc');
-        
-        console.log('\033[2J');
-        view.context = view.context || 'use require';
-        var output = mustache.render(tpl, view);
-        console.log(output);
-        console.log();
-    } catch (e) {
-        cb ? cb(e) : console.log(e + "\nmake file!");
+    // check two-case: public, native (black edition)
+    var view, err, errCnt = 0, div, divs = ['public_', ''];
+    while (divs.length) {
+        div = divs.shift();
+        try {
+            view = require('../docs/' + div + id + '_doc');
+        } catch (e) {
+            err = e;
+            errCnt++;
+        }
     }
+
+    // err
+    if (errCnt == 2) {
+        cb && cb(err);
+        return;
+    }
+
+    // parsing
+    view.context = view.context || 'use require';
+    var output = mustache.render(tpl_doc, view);
+
+    // print
+    console.log('\033[2J');
+    console.log(output);
+    console.log();
 }
 
 exports.builtin = builtin;

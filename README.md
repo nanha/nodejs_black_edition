@@ -54,9 +54,12 @@ Node Black Edition 소개
         make install
 
 
-사용방법 DEMO
-----------------
--
--
--
--
+사용방법
+----------
+
+npm과 같이 설치되는 <code>nodeman</code>을 사용하여 현재 builtin되어진 module
+![usage](https://github.com/nanha/nodeman/raw/master/images/nodeman_usage.png)
+
+    $ nodeman -h
+    $ nodeman -b
+    $ nodeman optimist
