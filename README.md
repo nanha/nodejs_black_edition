@@ -45,7 +45,7 @@ Node Black Edition 소개
 -----------
 
 
-* 저장소를 clone하여 node.js 소스트리 최상위에서 압축을 해제합니다.
+* 저장소를 clone하거나, 압축파일을 다운로드 후, 모든 디렉토리에포함된 파일들을 소스트리에 복사합니다. (이 부분은 자동 스크립트가 필요하거나, 추후 node.js 소스트리에 적용한 전체 패키지 소스를 배포해야함)
 * 설치를 진행합니다.
 
         make distclean
@@ -57,9 +57,22 @@ Node Black Edition 소개
 사용방법
 ----------
 
-npm과 같이 설치되는 <code>nodeman</code>을 사용하여 현재 builtin되어진 module
+## cli
+
+### $ nodeman -h
 ![usage](https://github.com/nanha/nodeman/raw/master/images/nodeman_usage.png)
 
-    $ nodeman -h
-    $ nodeman -b
-    $ nodeman optimist
+### $ nodeman -b
+![builtin](https://github.com/nanha/nodeman/raw/master/images/nodeman_builtin_list.png)
+
+### $ nodeman optimist
+![output](https://photos-1.dropbox.com/btj/4faa6d69/wrJ7qPsDFgAg78-vcNjiIR_GcUqX9rJvkD8n7y2Q7ks/ScreenShot003.jpg?size=1280x960)
+
+
+## repl
+
+    $ node
+    > var man = require('nodeman');
+    > man.help('optimist')
+
+
