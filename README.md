@@ -57,10 +57,22 @@ Node Black Edition 소개
 사용방법
 ----------
 
-npm과 같이 설치되는 <code>nodeman</code>을 사용하여 현재 builtin되어진 module
+## cli
 
+### $ nodeman -h
 ![usage](https://github.com/nanha/nodeman/raw/master/images/nodeman_usage.png)
 
-    $ nodeman -h
-    $ nodeman -b
-    $ nodeman optimist
+### $ nodeman -b
+![builtin](https://github.com/nanha/nodeman/raw/master/images/nodeman_builtin_list.png)
+
+### $ nodeman optimist
+![output](https://photos-1.dropbox.com/btj/4faa6d69/wrJ7qPsDFgAg78-vcNjiIR_GcUqX9rJvkD8n7y2Q7ks/ScreenShot003.jpg?size=1280x960)
+
+
+## repl
+
+    $ node
+    > var man = require('nodeman');
+    > man.help('optimist')
+
+
