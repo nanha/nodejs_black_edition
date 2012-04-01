@@ -68,6 +68,8 @@ DEMO
 사용방법
 ----------
 
+설치완료되면 nodeman이 npm과 같이 설치됩니다. [nodeman](https://github.com/nanha/nodeman) 여기를 참고하세요.
+
 ## cli
 
 ### $ nodeman -h
