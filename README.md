@@ -3,7 +3,7 @@ Node.js Black Edition (include native module, not file load, not npm) 소개
 
   Node.js 를 알리는 노이즈 마케팅 패키지 입니다. Node.js가 기억속에서 사라지지 않도록 널리 알리는 목적을 가지고 있습니다. :) 재미있게 봐주세요. Node Black Edition을 사용해 주셔서 감사합니다.
   
-  **참고로 실무에 nodeqa.com, 진행한 메신저 프로젝트에 이것을 도입했습니다**
+  **참고로 실무에 nodeqa.com, 메신저 프로젝트에 이것을 도입했습니다**
 
 
 동기
