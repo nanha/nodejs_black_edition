@@ -76,6 +76,11 @@ DEMO
 ### $ nodeman -b
 ![builtin](https://github.com/nanha/nodeman/raw/master/images/nodeman_builtin_list.png)
 
+위에 보이는 native module list 를 require하여 사용하면 됩니다. underscore 예제
+
+![underscore](https://github.com/nanha/nanha.github.com/raw/master/images/nodeb_underscore.png)
+
+
 ### $ nodeman optimist
 ![output](https://photos-1.dropbox.com/btj/4faa6d69/wrJ7qPsDFgAg78-vcNjiIR_GcUqX9rJvkD8n7y2Q7ks/ScreenShot003.jpg?size=1280x960)
 
