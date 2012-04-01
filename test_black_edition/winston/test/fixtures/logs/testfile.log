@@ -1,8 +1,0 @@
-{"level":"silly","message":"test message"}
-{"level":"verbose","message":"test message"}
-{"level":"info","message":"test message"}
-{"level":"warn","message":"test message"}
-{"level":"debug","message":"test message"}
-{"level":"error","message":"test message"}
-{"metadata":true,"level":"info","message":"test message"}
-"metadata"
