@@ -1,3 +1,9 @@
+소개
+-----
+
+  node.js 알짜배기 문서제공하고, Node.js Black Edition의 Helper로서 동작하는데 목적이 있습니다. github의 readme를 긁어와서 바로 보여줄 수 있지만, 내가 사용해보고 중요한 부분을 color module을 사용하여 제공합니다. 문서의 업데이트는 module 중요도에 따라 계속 쭈~욱 된다는것을 약속드립니다.
+  
+  
 동기
 -------
 
@@ -8,6 +14,11 @@
 -----
 
     npm install nodeman -g
+
+업데이트
+--------
+
+    npm update nodeman -g
 
 
 문서추가 방법
