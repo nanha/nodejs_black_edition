@@ -74,13 +74,14 @@ DEMO
 
 ### $ nodeman 실행하기
 
-    nodeman OR nodeman -h
+    $ nodeman
+    $ nodeman -h
 
 ![usage](https://github.com/nanha/nodeman/raw/master/images/nodeman_usage.png)
 
 ### $ 탑재된 module list 확인하기
 
-    nodeman -b
+    $ nodeman -b
 
 ![builtin](https://github.com/nanha/nodeman/raw/master/images/nodeman_builtin_list.png)
 
@@ -91,7 +92,7 @@ DEMO
 
 ### $ 탑재된 optimist module 확인하기
 
-    nodeman optimist
+    $ nodeman optimist
 
 ![output](https://photos-1.dropbox.com/btj/4faa6d69/wrJ7qPsDFgAg78-vcNjiIR_GcUqX9rJvkD8n7y2Q7ks/ScreenShot003.jpg?size=1280x960)
 
