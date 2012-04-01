@@ -5,6 +5,14 @@ Node.js Black Edition (include native module, not file load, not npm) 소개
   
   **참고로 실무에 nodeqa.com, 메신저 프로젝트에 이것을 도입했습니다**
 
+DEMO
+-----
+
+  탑재되어 있는 module중 node-fibers, npm install 없이 cpp lib fibers module이 native module으로 컴파일되어 탑재되었습니다.
+
+![fiber](https://github.com/nanha/nanha.github.com/raw/master/images/node_fibers.png)
+
+
 
 동기
 -------
