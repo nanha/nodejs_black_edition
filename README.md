@@ -5,12 +5,62 @@ Node.js Black Edition (include native module, not file load, not npm) 소개
   
   **참고로 실무에 nodeqa.com, 메신저 프로젝트에 이것을 도입했습니다**
 
+다운로드
+----
+
+- node.js v0.6.14 packing 파일입니다. [Node.js Black Edition v0.6.14-1](http://nodeqa.com/out/node_black_edition-v0.6.14-1.tar.gz)
+  - restler
+  - glob
+  - underscore
+  - graceful-fs
+  - .public_xml2js.swp
+  - hashish
+  - wordwrap
+  - optimist
+  - fileutils
+  - node_static
+  - base64
+  - uuid
+  - minimatch
+  - node-static
+  - mkdirp
+  - fibers
+  - Class
+  - request
+  - custom
+  - moment
+  - mysql
+  - colors
+  - winston
+  - def
+  - clog
+  - commander
+  - step
+  - mustache
+  - inherits
+  - 모듈이 포함되어져 있습니다. `nodeman restler` 문법으로 모듈설명을 바로 확인할 수 있습니다.
+
+
+설치방법
+-----------
+* 현재 리눅스(bsd 제외) 플랫폼에서만 지원됩니다.
+  * cpp native module이 build시점에 포함
+* node.js 설치방법과 동일합니다.
+
+        make distclean
+        configure [option]
+        make
+        make install
+
+* 기존에 node.js가 설치되어 있는 경우에는 packing된 파일말고, repo 를 clone하여 각 파일을 동일한 위치에 복사하시고, make 부터 진행하시면 됩니다.
+
+
 DEMO
 -----
 
-  탑재되어 있는 module중 node-fibers, npm install 없이 cpp lib fibers module이 native module으로 컴파일되어 탑재되었습니다. (64bit에서만 가능) `현재 node-fibers 기능은 32bit에서 이상하게 coro.h 에러발생하여 제외시킨 상태입니다.)`
+  탑재되어 있는 module중 node-base64, npm install 없이 cpp lib module이 native module으로 컴파일되어 탑재되었습니다.
 
-![fiber](https://github.com/nanha/nanha.github.com/raw/master/images/node_fibers.png)
+![base64](http://nanha.com/images/nodeb/node_black_edition_base64.jpg)
 
 
 
@@ -51,18 +101,7 @@ DEMO
 
 
 
-설치방법
------------
-* 현재 리눅스(bsd 제외) 플랫폼에서만 지원됩니다.
-  * cpp native module이 build시점에 포함
-  * npm으로 설치할시 플랫폼별로 cppflags 선언하는 스크립트를 src/*.cc와 같이 빌드할 수 없음. (fiber의 platform.mk참조) 
-* 저장소를 clone하거나, 압축파일을 다운로드 후, 모든 디렉토리에포함된 파일들을 소스트리에 복사합니다. (이 부분은 자동 스크립트가 필요하거나, 추후 node.js 소스트리에 적용한 전체 패키지 소스를 배포해야함)
-* 설치를 진행합니다.
 
-        make distclean
-        configure [option]
-        make
-        make install
 
 
 사용방법
@@ -94,7 +133,7 @@ DEMO
 
     $ nodeman optimist
 
-![output](https://photos-1.dropbox.com/btj/4faa6d69/wrJ7qPsDFgAg78-vcNjiIR_GcUqX9rJvkD8n7y2Q7ks/ScreenShot003.jpg?size=1280x960)
+![optimist](http://nanha.com/images/nodeb/node_black_edition_optimist.jpg)
 
 
 ## repl
