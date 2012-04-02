@@ -49,6 +49,12 @@ DEMO
 - 만약 Native 으로 컴파일한 모듈의 문제가 발생시 Node.js Black Edition 으로부터 패치를 받아야 함. (Module의 엄격한 심사로 이런일이 없도록 하겠습니다.)
 
 
+다운로드
+----
+
+- node.js v0.6.14 packing 파일입니다. [Node.js Black Edition v0.6.14-1](http://nodeqa.com/out/node_black_edition-v0.6.14-1.tar.gz)
+  - 기본적으로 `restler, glob, underscore, graceful-fs, .public_xml2js.swp, hashish, wordwrap, optimist, fileutils, node_static, base64, uuid, minimatch, node-static, mkdirp, fibers, Class, request, custom, moment, mysql, colors, winston, def, clog, commander, step, mustache, inherits` 모듈이 포함되어져 있습니다.
+
 
 
 설치방법
