@@ -45,13 +45,14 @@ Node.js Black Edition (include native module, not file load, not npm) 소개
 -----------
 * 현재 리눅스(bsd 제외) 플랫폼에서만 지원됩니다.
   * cpp native module이 build시점에 포함
-* 저장소를 clone하거나, 압축파일을 다운로드 후, 모든 디렉토리에포함된 파일들을 소스트리에 복사합니다. (이 부분은 자동 스크립트가 필요하거나, 추후 node.js 소스트리에 적용한 전체 패키지 소스를 배포해야함)
-* 설치를 진행합니다.
+* node.js 설치방법과 동일합니다.
 
         make distclean
         configure [option]
         make
         make install
+
+* 기존에 node.js가 설치되어 있는 경우에는 packing된 파일말고, repo 를 clone하여 각 파일을 동일한 위치에 복사하시고, make 부터 진행하시면 됩니다.
 
 
 DEMO
