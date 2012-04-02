@@ -45,7 +45,6 @@ Node.js Black Edition (include native module, not file load, not npm) 소개
 -----------
 * 현재 리눅스(bsd 제외) 플랫폼에서만 지원됩니다.
   * cpp native module이 build시점에 포함
-  * npm으로 설치할시 플랫폼별로 cppflags 선언하는 스크립트를 src/*.cc와 같이 빌드할 수 없음. (fiber의 platform.mk참조) 
 * 저장소를 clone하거나, 압축파일을 다운로드 후, 모든 디렉토리에포함된 파일들을 소스트리에 복사합니다. (이 부분은 자동 스크립트가 필요하거나, 추후 node.js 소스트리에 적용한 전체 패키지 소스를 배포해야함)
 * 설치를 진행합니다.
 
