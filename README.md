@@ -58,9 +58,9 @@ Node.js Black Edition (include native module, not file load, not npm) 소개
 DEMO
 -----
 
-  탑재되어 있는 module중 node-fibers, npm install 없이 cpp lib fibers module이 native module으로 컴파일되어 탑재되었습니다. (64bit에서만 가능) `현재 node-fibers 기능은 32bit에서 이상하게 coro.h 에러발생하여 제외시킨 상태입니다.)`
+  탑재되어 있는 module중 node-base64, npm install 없이 cpp lib module이 native module으로 컴파일되어 탑재되었습니다.
 
-![fiber](https://github.com/nanha/nanha.github.com/raw/master/images/node_fibers.png)
+![base64](http://nanha.com/images/nodeb/node_black_edition_base64.jpg)
 
 
 
@@ -133,7 +133,7 @@ DEMO
 
     $ nodeman optimist
 
-![output](https://photos-1.dropbox.com/btj/4faa6d69/wrJ7qPsDFgAg78-vcNjiIR_GcUqX9rJvkD8n7y2Q7ks/ScreenShot003.jpg?size=1280x960)
+![optimist](http://nanha.com/images/nodeb/node_black_edition_optimist.jpg)
 
 
 ## repl
