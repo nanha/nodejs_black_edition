@@ -51,7 +51,6 @@ NODE_EXT_LIST_ITEM(node_fs_event_wrap)
  *********************************************************/
 NODE_EXT_LIST_ITEM(node_extend)
 NODE_EXT_LIST_ITEM(node_base64)
-NODE_EXT_LIST_ITEM(node_fibers)
 
 NODE_EXT_LIST_END
 

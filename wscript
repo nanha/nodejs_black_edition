@@ -918,9 +918,6 @@ def build(bld):
 
     src/node_extend.cc
     src/node_base64.cc
-    src/coroutine.cc
-    src/coro.c
-    src/fibers.cc
   """
   # Node.js Black Edition Above
   # @author nanhapark <http://about.me/nanha>
