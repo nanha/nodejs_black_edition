@@ -116,13 +116,13 @@ DEMO
     $ nodeman
     $ nodeman -h
 
-![usage](https://github.com/nanha/nodeman/raw/master/images/nodeman_usage.png)
+![usage](http://nanha.com/images/nodeb/nodeman_cli.png)
 
 ### $ 탑재된 module list 확인하기
 
     $ nodeman -b
 
-![builtin](https://github.com/nanha/nodeman/raw/master/images/nodeman_builtin_list.png)
+![builtin](http://nanha.com/images/nodeb/nodeman_list.png)
 
 위에 보이는 native module list 를 require하여 사용하면 됩니다. underscore 예제
 
@@ -133,7 +133,7 @@ DEMO
 
     $ nodeman optimist
 
-![optimist](http://nanha.com/images/nodeb/node_black_edition_optimist.jpg)
+![optimist](http://nanha.com/images/nodeb/nodeman_optimist.png)
 
 
 ## repl
